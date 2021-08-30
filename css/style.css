@@ -23,3 +23,9 @@ section{
     text-align: center;
     padding: 20px;
 }
+td{
+    height: 20px;
+}
+table, td, th{
+    border: 1px solid black;
+}
