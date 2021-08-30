@@ -14,6 +14,7 @@
 // 6. Creo una funzione per evento clck -cancel che unnulla tutti i dati inseriti
 
 var btnCalc = document.getElementById("calc-ticket");
+var btnCancel = document.getElementById("cancel");
 var carriageNumber = Math.floor((Math.random() * 20) + 1);
 var bookingNumber = Math.floor((Math.random() * 4000) + 1);
 
@@ -25,6 +26,7 @@ btnCalc.addEventListener("click",
         var km = parseInt(document.getElementById("km").value);
         var ageGroup = document.getElementById("age-group").value;
 
+        // calcolo del biglietto
         var price = (km * 0.21).toFixed(2);
 
         if (ageGroup == "Minnorenne"){
@@ -37,12 +39,22 @@ btnCalc.addEventListener("click",
          price = ((price / 100) * 60);
         }
 
+        // stampo i dati inseriti e il calcolo del biglietto nella tabella
         // questi ID sono della tabella!
         document.getElementById("total-price").innerHTML = price;
         document.getElementById("passanger-name").innerHTML = nomePassanger;
         document.getElementById("carriage-number").innerHTML = carriageNumber;
         document.getElementById("booking-number").innerHTML = bookingNumber;
 
+        //apro il biglietto
+        document.getElementById("final-price").classList.add("open");
     }
+);
+
+// btn annulla
+btnCancel.addEventListener("click",
+function(){
+    document.getElementById("final-price").classList.remove("open");
+}
 );
 

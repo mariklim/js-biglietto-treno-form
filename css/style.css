@@ -29,3 +29,11 @@ td{
 table, td, th{
     border: 1px solid black;
 }
+
+#final-price{
+    display: none;
+}
+
+#final-price.open{
+    display:block;
+}
