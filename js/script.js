@@ -28,16 +28,25 @@ btnCalc.addEventListener("click",
 
         // calcolo del biglietto
         var price = (km * 0.21).toFixed(2);
+        var discount20off = "20%";
+        var discount40off = "40%";
+        var fullPrice = "Biglietto Standart"
 
-        if (ageGroup == "minnorenne"){
+        if (ageGroup == "minorenne"){
          price = ((price / 100) * 80);
+         document.getElementById("discout").innerHTML = discount20off;
+      
     
         }
         else if (ageGroup == "maggiorenne") {
         price == price;
+        document.getElementById("discout").innerHTML = fullPrice;
+        
         } 
         else{
          price = ((price / 100) * 60);
+         document.getElementById("discout").innerHTML = discount40off;
+ 
         }
 
         // stampo i dati inseriti e il calcolo del biglietto nella tabella
