@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+ max-width: 80%;
+ margin: auto;
+}
+
+section{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.container h2{
+    text-align: center;
+}
+
+.ticket-form,.ticket-btn{
+    text-align: center;
+    padding: 20px;
+}

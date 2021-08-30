@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treniboolean</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Ticket calc -->
+        <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <section id="ticket-calc">
+            <div class="ticket-form">
+                <label for="name">Nome Cognome</label>
+                <input type="text" id="name" name="nome" placeholder="Inscerisci il nome e cognome">
+
+                <label for="name">Km da percorrere</label>
+                <input type="number" id="km" name="km" placeholder="Inscerisci i km">
+
+                <label for="age-group">Fascia d'età</label>
+                <select name="age-group" id="age-group">
+                    <option value="insert-age-group">Scegli fascia d'età</option>
+                    <option value="minnorenni">Minnorenni</option>
+                    <option value="maggiorenni">Maggiorenni</option>
+                    <option value="over65">Over 65</option>
+                </select>
+            </div>
+            <div class="ticket-btn">
+                <button id="calc-ticket">Genera</button>
+                <button id="cancel">Annulla</button>
+            </div>
+
+
+        </section>
+        <!-- /Ticket calc -->
+        <!-- Final price -->
+        <h2>IL TUO BIGLIETTO</h2>
+        <section id="final-price">
+
+
+        </section>
+        <!-- /Final price -->
+    </div>
+   
+    <script src="js/script.js"></script>
+</body>
+</html>
