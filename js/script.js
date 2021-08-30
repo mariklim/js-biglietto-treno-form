@@ -5,6 +5,7 @@
 // va applicato uno sconto del 40% per gli over 65.
 // Il recap dei dati e l'output del prezzo finale va stampato in pagina (formattato con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
+
 // 1. Salvo i dati del passaggero nelle var: nome, km e ageGroup
 // 2. Creo una var price dove calcolo il prezzo in base ai km (0.21 € al km)
 // 3. Creo una condizione if per applicare lo sconto
@@ -13,6 +14,9 @@
 // 6. Creo una funzione per evento clck -cancel che unnulla tutti i dati inseriti
 
 var btnCalc = document.getElementById("calc-ticket");
+var carriageNumber = Math.floor((Math.random() * 20) + 1);
+var bookingNumber = Math.floor((Math.random() * 4000) + 1);
+
 
 btnCalc.addEventListener("click",
     function(){
@@ -36,6 +40,8 @@ btnCalc.addEventListener("click",
         // questi ID sono della tabella!
         document.getElementById("total-price").innerHTML = price;
         document.getElementById("passanger-name").innerHTML = nomePassanger;
+        document.getElementById("carriage-number").innerHTML = carriageNumber;
+        document.getElementById("booking-number").innerHTML = bookingNumber;
 
     }
 );
