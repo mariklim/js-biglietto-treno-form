@@ -12,11 +12,31 @@
 // 5. Creo una funzione per evento click che stampa i dati attraverso nelle caselle giuste document.getElementById(id).innerHTML =
 // 6. Creo una funzione per evento clck -cancel che unnulla tutti i dati inseriti
 
-var nomePassanger = document.getElementById("name").value;
-// "name" è ID che abbiamo indicato nella ticket-form
-var km = parseInt(document.getElementById("km").value);
-var ageGroup = document.getElementById("age-group").value;
+var btnCalc = document.getElementById("calc-ticket");
 
-console.log(nomePassanger);
-console.log(km);
-console.log(ageGroup);
+btnCalc.addEventListener("click",
+    function(){
+        var nomePassanger = document.getElementById("name").value;
+        // "name" è ID che abbiamo indicato nella ticket-form
+        var km = parseInt(document.getElementById("km").value);
+        var ageGroup = document.getElementById("age-group").value;
+
+        var price = (km * 0.21).toFixed(2);
+
+        if (ageGroup == "Minnorenne"){
+         price = ((price / 100) * 80);
+        }
+        else if (ageGroup == "Maggiorenne") {
+        price == price;
+        } 
+        else{
+         price = ((price / 100) * 60);
+        }
+
+        // questi ID sono della tabella!
+        document.getElementById("total-price").innerHTML = price;
+        document.getElementById("passanger-name").innerHTML = nomePassanger;
+
+    }
+);
+
