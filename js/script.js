@@ -29,10 +29,11 @@ btnCalc.addEventListener("click",
         // calcolo del biglietto
         var price = (km * 0.21).toFixed(2);
 
-        if (ageGroup == "Minnorenne"){
+        if (ageGroup == "minnorenne"){
          price = ((price / 100) * 80);
+    
         }
-        else if (ageGroup == "Maggiorenne") {
+        else if (ageGroup == "maggiorenne") {
         price == price;
         } 
         else{
@@ -55,6 +56,8 @@ btnCalc.addEventListener("click",
 btnCancel.addEventListener("click",
 function(){
     document.getElementById("final-price").classList.remove("open");
+    var nomePassanger = document.getElementById("name").value = "";
+    var km = parseInt(document.getElementById("km").value = "");
 }
 );
 
