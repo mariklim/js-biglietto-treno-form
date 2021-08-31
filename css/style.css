@@ -63,11 +63,26 @@ section#ticket-calc{
     border-color: chocolate;
 }
 /* Section Final price */
+
 #final-price{
+    padding: 30px;
     display: none;
 }
-
 #final-price.open{
     display:block;
+}
+
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 20px;
+}
+
+th:first-child, td:first-child{
+    background-color: rgb(184, 220, 221);
 }
 

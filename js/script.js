@@ -21,33 +21,38 @@ var bookingNumber = Math.floor((Math.random() * 4000) + 1);
 
 btnCalc.addEventListener("click",
     function(){
+        if (km > 0 && ageGroup !=0 ){
+            
+        }
+
+
         var nomePassanger = document.getElementById("name").value;
         // "name" è ID che abbiamo indicato nella ticket-form
         var km = parseInt(document.getElementById("km").value);
         var ageGroup = document.getElementById("age-group").value;
 
         // calcolo del biglietto
-        var price = (km * 0.21).toFixed(2);
-        var discount20off = "20%";
-        var discount40off = "40%";
-        var fullPrice = "Biglietto Standard"
+        var price = (km * 0.21);
+        var discount = "Biglietto Standard";
+
 
         if (ageGroup == "minorenne"){
          price = ((price / 100) * 80);
-         document.getElementById("discout").innerHTML = discount20off;
+         discount = "sconto 20%";
       
     
         }
         else if (ageGroup == "maggiorenne") {
         price == price;
-        document.getElementById("discout").innerHTML = fullPrice;
+        discount = "Biglietto Standard";
         
         } 
         else{
          price = ((price / 100) * 60);
-         document.getElementById("discout").innerHTML = discount40off;
- 
+         discount = "sconto 40%";
         }
+
+        price = price.toFixed(2);   
 
         // stampo i dati inseriti e il calcolo del biglietto nella tabella
         // questi ID sono della tabella!
@@ -55,6 +60,7 @@ btnCalc.addEventListener("click",
         document.getElementById("passanger-name").innerHTML = nomePassanger;
         document.getElementById("carriage-number").innerHTML = carriageNumber;
         document.getElementById("booking-number").innerHTML = bookingNumber;
+        document.getElementById("discout").innerHTML = discount;
 
         //apro il biglietto
         document.getElementById("final-price").classList.add("open");
@@ -67,6 +73,7 @@ function(){
     document.getElementById("final-price").classList.remove("open");
     var nomePassanger = document.getElementById("name").value = "";
     var km = parseInt(document.getElementById("km").value = "");
+    var km = parseInt(document.getElementById("age-group").selectedIndex = "0");
 }
 );
 
