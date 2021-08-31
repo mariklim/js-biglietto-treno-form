@@ -4,32 +4,65 @@
     box-sizing: border-box;
 }
 
+ /* Common */
+
+body{
+    background-color: rgb(202, 21, 97);
+}
 .container{
  max-width: 80%;
  margin: auto;
 }
 
 section{
-    border: 1px solid black;
+    background-color: white;
     border-radius: 10px;
     margin: 20px;
+   
 }
 
-.container h2{
+/* Section Calc form */
+
+section#ticket-calc{
+    box-shadow: -6px 5px 20px -6px rgba(0,0,0,0.86);
+}
+.container h2, section h2{
     text-align: center;
+    color: white;
+    padding: 40px;   
 }
 
 .ticket-form,.ticket-btn{
     text-align: center;
     padding: 20px;
 }
-td{
-    height: 20px;
-}
-table, td, th{
-    border: 1px solid black;
+
+.ticket-form{
+    display: flex;
+    justify-content: space-around;
 }
 
+.ticket-form label, .ticket-btn button{
+    color: rgb(156, 11, 113);
+}
+.ticket-form input, .ticket-form select, .ticket-btn button{
+    margin-top: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: rgb(156, 11, 113);
+}
+
+.ticket-btn button{
+    margin: 10px;
+    font-weight: bold;
+    background-color: rgba(212, 202, 202, 0.698);
+}
+
+.ticket-btn button:hover{
+    border-color: chocolate;
+}
+/* Section Final price */
 #final-price{
     display: none;
 }
@@ -37,3 +70,4 @@ table, td, th{
 #final-price.open{
     display:block;
 }
+

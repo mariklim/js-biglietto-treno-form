@@ -30,7 +30,7 @@ btnCalc.addEventListener("click",
         var price = (km * 0.21).toFixed(2);
         var discount20off = "20%";
         var discount40off = "40%";
-        var fullPrice = "Biglietto Standart"
+        var fullPrice = "Biglietto Standard"
 
         if (ageGroup == "minorenne"){
          price = ((price / 100) * 80);
